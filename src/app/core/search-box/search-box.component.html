@@ -1,0 +1,8 @@
+<header class="header">
+  <h1>todos</h1>
+  <form [formGroup]="form" (ngSubmit)="submitForm()">
+    <input class="new-todo" placeholder="What needs to be done?" formControlName="text">
+  </form>
+  <input class="toggle-all" type="checkbox" [(ngModel)]="toggle" (click)="OnToggleEvent()">
+  <label for="toggle-all">Mark all as complete</label>
+</header>

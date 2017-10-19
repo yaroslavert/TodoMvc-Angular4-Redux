@@ -1,0 +1,1 @@
+<app-todo *ngFor="let todo of todoList | todoFilter: filter" [todo]="todo" (remove)="remove($event)"></app-todo>

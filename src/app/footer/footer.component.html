@@ -1,0 +1,15 @@
+<footer class="footer" ng-show="todos.length">
+    <span class="todo-count"><strong class="ng-binding">{{countTodoList}}</strong></span>
+    <ul class="filters">
+      <li>
+        <a [ngClass]="{selected: filter === 'all'}" (click)="updateFilter('all')" class="selected">All</a>
+      </li>
+      <li>
+        <a [ngClass]="{selected: filter === 'active'}" (click)="updateFilter('active')">Active</a>
+      </li>
+      <li>
+        <a [ngClass]="{selected: filter === 'completed'}" (click)="updateFilter('completed')">Completed</a>
+      </li>
+    </ul>
+    <button class="clear-completed" (click)="clearCompleted()" [hidden]="!countTodoList">Clear completed</button>
+</footer>
